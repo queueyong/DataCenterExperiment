@@ -19,10 +19,7 @@ S = constructServers(SS,WS)
 x, y = solveCentralized(SS, WS, S)
 file_record = open("./result/record_violation_prob_MCSimulation.txt" , "w")
 for i in 1:REPLICATION
-<<<<<<< HEAD
-=======
     tic()
->>>>>>> 9ad4ea1725cddedb75f82aaf4c75e616f114d502
     println("Replication $i")
     J = generateStationaryJobs(WS, RUNNING_TIME)
     S = constructServers(SS,WS)
@@ -31,6 +28,7 @@ for i in 1:REPLICATION
     setOptimalPolicy(dc, x, y)
     run_replication_MCSim(dc, MSD, RUNNING_TIME, WARM_UP_TIME)
     writeRecord(file_record, MSD, dc)
+    toc()
 end
 close(file_record)
 file_sum = open("./result/sum_MCSimlation.txt" , "w")
