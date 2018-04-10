@@ -12,14 +12,13 @@ const WARM_UP_TIME = 0.3*RUNNING_TIME
 const REGULAR_UPDATE_INTERVAL = 0.01
 const NUM_REPLICATION = 10000
 
-REPLICATION = 1000
+REPLICATION = 10000
 SS = readServerSettingsData("../../server_settings.csv")
 WS = readWorkloadSettingsData("../../workload_settings.csv")
 S = constructServers(SS,WS)
 x, y = solveCentralized(SS, WS, S)
 file_record = open("./result/record_violation_prob_MCSimulation.txt" , "w")
-Threads.@threads for i in 1:REPLICATION
-    tic()
+for i in 1:REPLICATION
     println("Replication $i")
     J = generateStationaryJobs(WS, RUNNING_TIME)
     S = constructServers(SS,WS)
@@ -28,7 +27,6 @@ Threads.@threads for i in 1:REPLICATION
     setOptimalPolicy(dc, x, y)
     run_replication_MCSim(dc, MSD, RUNNING_TIME, WARM_UP_TIME)
     writeRecord(file_record, MSD, dc)
-    toc()
 end
 close(file_record)
 file_sum = open("./result/sum_MCSimlation.txt" , "w")

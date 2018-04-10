@@ -1,0 +1,73 @@
+WARNING: Method definition midpoints(Base.Range{T} where T) in module Base at deprecated.jl:56 overwritten in module StatsBase at /homes/choy/.julia/v0.6/StatsBase/src/hist.jl:535.
+WARNING: Method definition midpoints(AbstractArray{T, 1} where T) in module Base at deprecated.jl:56 overwritten in module StatsBase at /homes/choy/.julia/v0.6/StatsBase/src/hist.jl:533.
+WARNING: Method definition midpoints(Base.Range{T} where T) in module Base at deprecated.jl:56 overwritten in module StatsBase at /homes/choy/.julia/v0.6/StatsBase/src/hist.jl:535.
+WARNING: Method definition midpoints(AbstractArray{T, 1} where T) in module Base at deprecated.jl:56 overwritten in module StatsBase at /homes/choy/.julia/v0.6/StatsBase/src/hist.jl:533.
+WARNING: Method definition midpoints(Base.Range{T} where T) in module Base at deprecated.jl:56 overwritten in module StatsBase at /homes/choy/.julia/v0.6/StatsBase/src/hist.jl:535.
+WARNING: Method definition midpoints(AbstractArray{T, 1} where T) in module Base at deprecated.jl:56 overwritten in module StatsBase at /homes/choy/.julia/v0.6/StatsBase/src/hist.jl:533.
+WARNING: Method definition midpoints(Base.Range{T} where T) in module Base at deprecated.jl:56 overwritten in module StatsBase at /homes/choy/.julia/v0.6/StatsBase/src/hist.jl:535.
+WARNING: Method definition midpoints(AbstractArray{T, 1} where T) in module Base at deprecated.jl:56 overwritten in module StatsBase at /homes/choy/.julia/v0.6/StatsBase/src/hist.jl:533.
+ERROR: LoadError: LoadError: ArgumentError: Module CPLEX not found in current path.
+Run `Pkg.add("CPLEX")` to install the CPLEX package.
+Stacktrace:
+ [1] _require(::Symbol) at ./loading.jl:435
+ [2] require(::Symbol) at ./loading.jl:405
+ [3] include_from_node1(::String) at ./loading.jl:576
+ [4] include(::String) at ./sysimg.jl:14
+ [5] include_from_node1(::String) at ./loading.jl:576
+ [6] include(::String) at ./sysimg.jl:14
+ [7] process_options(::Base.JLOptions) at ./client.jl:305
+ [8] _start() at ./client.jl:371
+while loading /nfs2/choy/GitHub/DataCenterExperiments/SimStationary/OptimalPolicy/../../solvers.jl, in expression starting on line 1
+while loading /nfs2/choy/GitHub/DataCenterExperiments/SimStationary/OptimalPolicy/optpol_main_MCSim.jl, in expression starting on line 6
+
+signal (15): Terminated
+while loading /nfs2/choy/GitHub/DataCenterExperiments/SimStationary/OptimalPolicy/../../functions_distribution.jl, in expression starting on line 1
+_new_array_ at /buildworker/worker/package_linux64/build/src/array.c:98
+jl_deserialize_value_array at /buildworker/worker/package_linux64/build/src/dump.c:1689
+jl_uncompress_ast at /buildworker/worker/package_linux64/build/src/dump.c:2852
+inlineable at ./inference.jl:3933
+unknown function (ip: 0x7f3331fbd172)
+jl_call_fptr_internal at /buildworker/worker/package_linux64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /buildworker/worker/package_linux64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /buildworker/worker/package_linux64/build/src/gf.c:1926
+inlining_pass at ./inference.jl:4428
+inlining_pass at ./inference.jl:4327
+inlining_pass at ./inference.jl:4327
+inlining_pass! at ./inference.jl:4265
+optimize at ./inference.jl:2905
+typeinf at ./inference.jl:2816
+typeinf_frame at ./inference.jl:2504
+typeinf_code at ./inference.jl:2583
+unknown function (ip: 0x7f3331fc154d)
+jl_call_fptr_internal at /buildworker/worker/package_linux64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /buildworker/worker/package_linux64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /buildworker/worker/package_linux64/build/src/gf.c:1926
+typeinf_ext at ./inference.jl:2622
+unknown function (ip: 0x7f3331fa0812)
+jl_call_fptr_internal at /buildworker/worker/package_linux64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /buildworker/worker/package_linux64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /buildworker/worker/package_linux64/build/src/gf.c:1926
+jl_apply at /buildworker/worker/package_linux64/build/src/julia.h:1424 [inlined]
+jl_apply_with_saved_exception_state at /buildworker/worker/package_linux64/build/src/rtutils.c:257
+jl_type_infer at /buildworker/worker/package_linux64/build/src/gf.c:262
+jl_compile_for_dispatch at /buildworker/worker/package_linux64/build/src/gf.c:1661
+jl_compile_method_internal at /buildworker/worker/package_linux64/build/src/julia_internal.h:307 [inlined]
+jl_call_method_internal at /buildworker/worker/package_linux64/build/src/julia_internal.h:354 [inlined]
+jl_apply_generic at /buildworker/worker/package_linux64/build/src/gf.c:1926
+jl_apply at /buildworker/worker/package_linux64/build/src/julia.h:1424 [inlined]
+jl_f__apply at /buildworker/worker/package_linux64/build/src/builtins.c:426
+jl_f__apply_latest at /buildworker/worker/package_linux64/build/src/builtins.c:464
+message_handler_loop at ./distributed/process_messages.jl:161
+process_tcp_streams at ./distributed/process_messages.jl:118
+#99 at ./event.jl:73
+unknown function (ip: 0x7f33250aaa6f)
+jl_call_fptr_internal at /buildworker/worker/package_linux64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /buildworker/worker/package_linux64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /buildworker/worker/package_linux64/build/src/gf.c:1926
+jl_apply at /buildworker/worker/package_linux64/build/src/julia.h:1424 [inlined]
+start_task at /buildworker/worker/package_linux64/build/src/task.c:267
+unknown function (ip: 0xffffffffffffffff)
+unknown function (ip: 0xffffffffffffffff)
+Allocations: 2675000 (Pool: 2673739; Big: 1261); GC: 3
+WARNING: Method definition midpoints(Base.Range{T} where T) in module Base at deprecated.jl:56 overwritten in module StatsBase at /homes/choy/.julia/v0.6/StatsBase/src/hist.jl:535.
+WARNING: Method definition midpoints(AbstractArray{T, 1} where T) in module Base at deprecated.jl:56 overwritten in module StatsBase at /homes/choy/.julia/v0.6/StatsBase/src/hist.jl:533.
