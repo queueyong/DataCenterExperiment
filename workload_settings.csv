@@ -1,0 +1,6 @@
+app_index:inter_arrival_dist:inter_arrival_mean:inter_arrival_scv:job_size_dist:job_size_mean:job_size_scv
+1:Lognormal:0.25:2:Lognormal:5:1.5
+2:Lognormal:0.5:1.5:Lognormal:10:2
+3:Exponential:0.25:1:Lognormal:5:1
+4:Lognormal:0.1:0.8:Lognormal:2:0.8
+5:Lognormal:0.2:2:Lognormal:3:0.5
