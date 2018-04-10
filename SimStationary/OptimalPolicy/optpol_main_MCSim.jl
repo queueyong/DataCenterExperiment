@@ -7,7 +7,7 @@ include("../../solvers.jl")
 
 const MAX_ARRIVALS = 200000
 const WARM_UP_ARRIVALS = 50000
-const RUNNING_TIME = 5000.0
+const RUNNING_TIME = 2000.0
 const WARM_UP_TIME = 0.3*RUNNING_TIME
 const REGULAR_UPDATE_INTERVAL = 0.01
 const NUM_REPLICATION = 10000
@@ -19,6 +19,10 @@ S = constructServers(SS,WS)
 x, y = solveCentralized(SS, WS, S)
 file_record = open("./result/record_violation_prob_MCSimulation.txt" , "w")
 for i in 1:REPLICATION
+<<<<<<< HEAD
+=======
+    tic()
+>>>>>>> 9ad4ea1725cddedb75f82aaf4c75e616f114d502
     println("Replication $i")
     J = generateStationaryJobs(WS, RUNNING_TIME)
     S = constructServers(SS,WS)

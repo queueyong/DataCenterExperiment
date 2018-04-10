@@ -1,4 +1,4 @@
-using JuMP, Ipopt, CPLEX
+using JuMP, Ipopt
 
 function solveDistributed(SS)
 
