@@ -8,7 +8,7 @@ using PyPlot
 
 const MAX_ARRIVALS = 200000
 const WARM_UP_ARRIVALS = 50000
-const RUNNING_TIME = 5000.0
+const RUNNING_TIME = 2000.0
 const WARM_UP_TIME = 0.3*RUNNING_TIME
 const REGULAR_UPDATE_INTERVAL = 0.01
 const NUM_REPLICATION = 10000
@@ -20,8 +20,8 @@ J = generateStationaryJobs(WS, RUNNING_TIME)
 dc = DataCenter(SS, WS, J, S, REGULAR_UPDATE_INTERVAL, WARM_UP_ARRIVALS, MAX_ARRIVALS, WARM_UP_TIME, RUNNING_TIME)
 
 setOptimalPolicy(dc)
-file_record = open("./result/record.txt" , "w")
-file_summary = open("./result/summary.txt" , "w")
+file_record = open("./result/record_1_replication.txt" , "w")
+file_summary = open("./result/sum_1_replication.txt" , "w")
 PD = Plot_Data(S, file_record, file_summary)
 run_to_end(dc, PD, RUNNING_TIME, WARM_UP_TIME)      # until a certain number of services are completed
 
@@ -49,7 +49,6 @@ close(file_record)
 x = PD.time_array
 plt = PyPlot
 
-
 ## Speed plot for each server
 plt.figure(figsize = (12,8))
 for j in 1:length(S)
@@ -65,7 +64,7 @@ for j in 1:length(S)
   plt.tick_params(labelsize=6)
 end
 plt.savefig("./result/Long-run server speeds.pdf")
-plt.close()
+#plt.close()
 
 ## Number of jobs for each server
 plt.figure(figsize = (12,8))
@@ -80,7 +79,7 @@ for j in 1:length(S)
   plt.tick_params(labelsize=6)
 end
 plt.savefig("./result/Long-run number of jobs.pdf")
-plt.close()
+#plt.close()
 
 #=
 ## Price plot for each server
