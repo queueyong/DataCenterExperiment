@@ -3,6 +3,8 @@ This contains data center experiments codes written in Julia.
 
 Stochastic processes are assumed to be non-Poisson.
 
+![Alt text](/plot_sample.png)
+
 ## DeterministicProblem:
 Solving a deterministic nonlinear network optimization problem for a data center
 
