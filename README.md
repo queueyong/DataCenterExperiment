@@ -3,6 +3,7 @@ This contains data center experiments codes written in Julia.
 
 Stochastic processes are assumed to be non-Poisson.
 
+Reference: https://www.sciencedirect.com/science/article/pii/S0166531614000716
 ![Alt text](/plot_sample.png)
 
 ## DeterministicProblem:
